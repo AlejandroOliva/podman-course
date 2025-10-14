@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Web with Podman</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      max-width: 600px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #667eea;
+      margin-bottom: 20px;
+      font-size: 2.5em;
+    }
+
+    .emoji {
+      font-size: 4em;
+      margin: 20px 0;
+    }
+
+    p {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .code {
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+      font-family: 'Courier New', monospace;
+      margin: 20px 0;
+      color: #333;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #667eea;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      margin: 5px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="emoji">🚀</div>
+    <h1>Hello from Podman!</h1>
+    <p>This is your first web server running in a container.</p>
+    <div class="code">
+      podman run -d -p 8080:80 -v ./html:/usr/share/nginx/html:Z nginx
+    </div>
+    <p>You can edit this HTML file and changes will be reflected automatically.</p>
+    <div>
+      <span class="badge">🐳 Podman</span>
+      <span class="badge">🌐 nginx</span>
+      <span class="badge">✨ HTML5</span>
+    </div>
+  </div>
+</body>
+
+</html>
